@@ -305,7 +305,7 @@ export default function Home() {
 
   useEffect(() => {
     if (isCarouselPaused) return
-    const interval = setInterval(nextImage, 4000)
+    const interval = setInterval(nextImage, 3000)
     return () => clearInterval(interval)
   }, [isCarouselPaused, nextImage])
 
@@ -319,7 +319,7 @@ export default function Home() {
 
   useEffect(() => {
     if (isPortfolioPaused) return
-    const interval = setInterval(nextPortfolio, 2000)
+    const interval = setInterval(nextPortfolio, 4000)
     return () => clearInterval(interval)
   }, [isPortfolioPaused, nextPortfolio])
 
