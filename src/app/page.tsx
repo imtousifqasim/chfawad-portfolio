@@ -422,7 +422,7 @@ export default function Home() {
                   onClick={() => setCurrency("USD")}
                   className={`rounded-full px-4 h-8 text-xs font-bold transition-all ${
                     currency === "USD" 
-                      ? "bg-background text-foreground shadow-sm hover:bg-background" 
+                      ? "bg-gradient-to-r from-blue-600 to-cyan-500 !text-white hover:!text-white shadow-lg shadow-blue-600/20" 
                       : "text-muted-foreground hover:text-foreground hover:bg-background/50"
                   }`}
                 >
@@ -434,7 +434,7 @@ export default function Home() {
                   onClick={() => setCurrency("PKR")}
                   className={`rounded-full px-4 h-8 text-xs font-bold transition-all ${
                     currency === "PKR" 
-                      ? "bg-background text-foreground shadow-sm hover:bg-background" 
+                      ? "bg-gradient-to-r from-blue-600 to-cyan-500 !text-white hover:!text-white shadow-lg shadow-blue-600/20" 
                       : "text-muted-foreground hover:text-foreground hover:bg-background/50"
                   }`}
                 >
@@ -962,9 +962,9 @@ export default function Home() {
                         {service.description}
                       </p>
 
-                      <div className="flex items-center gap-2 text-sm font-bold text-blue-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
+                      <a href="#pricing" className="flex items-center gap-2 text-sm font-bold text-blue-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
                         Discuss Project <ChevronRight className="h-4 w-4" />
-                      </div>
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
@@ -1148,12 +1148,12 @@ export default function Home() {
                         {customPlan.price}
                       </span>
                       <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                        <Button
-                          className="bg-gradient-to-r from-violet-600 to-purple-500 hover:from-violet-700 hover:to-purple-600 text-white px-8 h-12 font-bold rounded-xl shadow-lg shadow-violet-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
-                          asChild
-                        >
-                          <a href="#contact">{customPlan.cta}</a>
-                        </Button>
+                          <Button
+                            className="bg-gradient-to-r from-violet-600 to-purple-500 hover:from-violet-700 hover:to-purple-600 text-white px-8 h-12 font-bold rounded-xl shadow-lg shadow-violet-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                            asChild
+                          >
+                            <a href="#pricing">{customPlan.cta}</a>
+                          </Button>
                         <Button
                           variant="outline"
                           className="px-8 h-12 font-bold rounded-xl border-emerald-500/20 bg-emerald-500/5 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-sm"
