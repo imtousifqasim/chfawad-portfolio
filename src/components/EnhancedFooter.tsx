@@ -131,7 +131,12 @@ export function EnhancedFooter() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/5 text-center">
+        <div className="mt-12 pt-8 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="h-px w-12 bg-gradient-to-r from-transparent to-emerald-600/50" />
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
+            <span className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-600/50" />
+          </div>
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Tousif Qasim. All rights reserved.
           </p>
