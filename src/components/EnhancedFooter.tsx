@@ -131,32 +131,10 @@ export function EnhancedFooter() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-white/5 text-center">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Tousif Qasim. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            {socials.map((s) => (
-              <a
-                key={s.name}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-emerald-600 transition-colors"
-              >
-                <span className="h-4 w-4 block">
-                  {socialIcons[s.name]?.({ className: "h-full w-full" })}
-                </span>
-              </a>
-            ))}
-          </div>
-          <a
-            href="#home"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-emerald-600 transition-colors"
-          >
-            Back to Top
-            <ChevronUp className="h-4 w-4" />
-          </a>
         </div>
       </div>
     </footer>
