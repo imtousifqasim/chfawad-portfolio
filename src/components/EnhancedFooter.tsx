@@ -65,10 +65,6 @@ export function EnhancedFooter() {
               <Phone className="h-3.5 w-3.5" />
               <span>+92 328 6477314</span>
             </div>
-            <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
-              <MapPin className="h-3.5 w-3.5" />
-              <span>Hujra, Punjab, Pakistan</span>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -124,6 +120,10 @@ export function EnhancedFooter() {
                   {s.name}
                 </a>
               ))}
+            </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+              <MapPin className="h-4 w-4 text-emerald-600" />
+              <span>Hujra, Punjab, Pakistan</span>
             </div>
             <a
               href="#contact"
