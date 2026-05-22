@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 
-const words = ["WordPress", "Shopify", "WHMCS", "Web Solutions"]
+const words = ["Mini Vlogs", "Food Reviews", "Business Promotions", "TikTok Reels"]
 
 export function TypingEffect() {
   const [wordIndex, setWordIndex] = useState(0)

@@ -16,29 +16,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tousifqasim.dev/"),
+  metadataBase: new URL("https://fawad-portfolio.vercel.app/"),
   alternates: {
     canonical: "/",
   },
-  title: "Tousif Qasim | WordPress, Shopify & WHMCS Developer",
-  description: "I’m Tousif Qasim, Professional WordPress, Shopify & WHMCS developer with 7+ years' experience, delivering custom websites, eCommerce stores, and automated solutions.",
+  title: "Fawad Ky Vlogs | Mini Vlogger & Content Creator",
+  description: "I'm Fawad, known as Fawad Ky Vlogs – a 17-year-old mini vlogger and TikTok influencer from Hujra Shah Muqeem, helping local businesses grow online through engaging video content.",
   icons: {
     icon: "/favicon.ico",
   },
   authors: [
-    { name: "Tousif Qasim", url: "https://tousifqasim.dev/" }
+    { name: "Fawad", url: "https://www.tiktok.com/@fawadkyvlogs" }
   ],
   openGraph: {
-    title: "Tousif Qasim | WordPress, Shopify & WHMCS Developer",
-    description: "I’m Tousif Qasim, Professional WordPress, Shopify & WHMCS developer with 7+ years' experience, delivering custom websites, eCommerce stores, and automated solutions.",
-    url: "https://tousifqasim.dev/",
-    siteName: "Tousif Qasim",
+    title: "Fawad Ky Vlogs | Mini Vlogger & Content Creator",
+    description: "I'm Fawad, known as Fawad Ky Vlogs – a 17-year-old mini vlogger and TikTok influencer from Hujra Shah Muqeem, helping local businesses grow online through engaging video content.",
+    url: "https://fawad-portfolio.vercel.app/",
+    siteName: "Fawad Ky Vlogs",
     images: [
       {
-        url: "https://i.postimg.cc/9Qj2mDzg/Tousif-Qasim.png",
+        url: "https://i.ibb.co/VphcCGMG/fawad.png",
         width: 1200,
         height: 630,
-        alt: "Tousif Qasim – WordPress, Shopify & WHMCS Developer"
+        alt: "Fawad Ky Vlogs – Mini Vlogger & Content Creator"
       }
     ],
     locale: "en_US",
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tousif Qasim | WordPress, Shopify & WHMCS Developer",
-    description: "I’m Tousif Qasim, Professional WordPress, Shopify & WHMCS developer with 7+ years' experience, delivering custom websites, eCommerce stores, and automated solutions.",
-    images: ["https://i.postimg.cc/9Qj2mDzg/Tousif-Qasim.png"],
-    creator: "@tousifqasim"
+    title: "Fawad Ky Vlogs | Mini Vlogger & Content Creator",
+    description: "I'm Fawad, known as Fawad Ky Vlogs – a 17-year-old mini vlogger and TikTok influencer from Hujra Shah Muqeem, helping local businesses grow online through engaging video content.",
+    images: ["https://i.ibb.co/VphcCGMG/fawad.png"],
+    creator: "@fawadkyvlogs"
   }
 };
 
@@ -68,12 +68,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Tousif Qasim",
-              jobTitle: "WordPress, Shopify & WHMCS Developer",
-              url: "https://tousifqasim.dev/",
-              image: "https://i.postimg.cc/9Qj2mDzg/Tousif-Qasim.png",
+              name: "Fawad",
+              givenName: "Fawad",
+              alternateName: "Fawad Ky Vlogs",
+              jobTitle: "Mini Vlogger & Content Creator",
+              url: "https://www.tiktok.com/@fawadkyvlogs",
+              image: "https://i.ibb.co/VphcCGMG/fawad.png",
               sameAs: [
-                "https://twitter.com/tousifqasim"
+                "https://www.tiktok.com/@fawadkyvlogs"
               ]
             })
           }}

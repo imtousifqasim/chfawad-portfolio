@@ -3,8 +3,8 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
-  Mail, Phone, MapPin, Send, Check, X, Instagram, Facebook, MessageCircle,
-  DollarSign, Code, Globe, ShoppingCart, Shield, Server, Package, HelpCircle,
+  Mail, MapPin, Send, Check, X, Music2, MessageCircle,
+  DollarSign, Video, Camera, Utensils, Store, TrendingUp, HelpCircle, Play,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -16,12 +16,12 @@ import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import emailjs from "@emailjs/browser"
 
-const EMAILJS_SERVICE_ID = "service_d2gjkb9"
-const EMAILJS_TEMPLATE_ID = "template_e08qfnl"
-const EMAILJS_PUBLIC_KEY = "n5vtuVWEKDKDgQ8qe"
+const EMAILJS_SERVICE_ID = "service_uus59em"
+const EMAILJS_TEMPLATE_ID = "template_9dkqk3a"
+const EMAILJS_PUBLIC_KEY = "PT85lmTuiIkI_FOAN"
 
 export function ContactSection() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "", budget: "", interest: "" })
+  const [formData, setFormData] = useState({ name: "", whatsapp: "", message: "", budget: "", interest: "" })
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
   const [showModal, setShowModal] = useState(false)
 
@@ -35,17 +35,18 @@ export function ContactSection() {
         EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
-          from_email: formData.email,
+          whatsapp: formData.whatsapp,
           message: formData.message,
           budget: formData.budget,
           interest: formData.interest,
+          to_email: "itxchfawad@gmail.com",
         },
         EMAILJS_PUBLIC_KEY
       )
 
       setFormStatus("success")
       setShowModal(true)
-      setFormData({ name: "", email: "", message: "", budget: "", interest: "" })
+      setFormData({ name: "", whatsapp: "", message: "", budget: "", interest: "" })
     } catch {
       setFormStatus("error")
       setTimeout(() => setFormStatus("idle"), 3000)
@@ -77,8 +78,7 @@ export function ContactSection() {
             </span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Get in touch for custom WordPress, WHMCS, or web development solutions.
-            I&apos;m ready to help bring your project to life!
+            Ready to promote your business? Let&apos;s create engaging content that reaches thousands.
           </p>
         </motion.div>
 
@@ -99,22 +99,22 @@ export function ContactSection() {
                   Contact Information
                 </h3>
                 <div className="space-y-4">
-                  <a href="mailto:contact@tousifqasim.dev" className="flex items-center gap-4 p-3 rounded-xl bg-emerald-600/5 hover:bg-emerald-600/10 transition-colors group">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-700 to-teal-500 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-emerald-600/20">
+                  <a href="mailto:contact@chfawad.pk" className="flex items-center gap-4 p-3 rounded-xl bg-emerald-600/5 hover:bg-emerald-600/10 transition-colors group">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-emerald-500/20">
                       <Mail className="h-5 w-5 text-white" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Email</p>
-                      <p className="font-semibold text-foreground">contact@tousifqasim.dev</p>
+                      <p className="font-semibold text-foreground">contact@chfawad.pk</p>
                     </div>
                   </a>
-                  <a href="tel:+923286477314" className="flex items-center gap-4 p-3 rounded-xl bg-emerald-600/5 hover:bg-emerald-600/10 transition-colors group">
+                  <a href="https://www.tiktok.com/@fawadkyvlogs" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-3 rounded-xl bg-emerald-600/5 hover:bg-emerald-600/10 transition-colors group">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-emerald-500/20">
-                      <Phone className="h-5 w-5 text-white" />
+                      <Music2 className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">Phone / WhatsApp</p>
-                      <p className="font-semibold text-foreground">+92 328 6477314</p>
+                      <p className="text-sm text-muted-foreground">TikTok</p>
+                      <p className="font-semibold text-foreground">@fawadkyvlogs</p>
                     </div>
                   </a>
                   <div className="flex items-center gap-4 p-3 rounded-xl bg-emerald-600/5">
@@ -123,7 +123,7 @@ export function ContactSection() {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Location</p>
-                      <p className="font-semibold text-foreground">Hujra Shah Muqeem, Pakistan</p>
+                      <p className="font-semibold text-foreground">Hujra Shah Muqeem, District Okara, Pakistan</p>
                     </div>
                   </div>
                 </div>
@@ -133,25 +133,15 @@ export function ContactSection() {
             <Card className="border-border/50 bg-white/5 dark:bg-black/5 backdrop-blur-xl">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-4">
-                  Follow Me
+                  Follow Me on TikTok
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  <a href="https://wa.me/923286477314" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center hover:bg-green-500/20 hover:border-green-500/40 hover:scale-110 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-green-500">
-                      <path d="M12.04 2C6.48 2 2 6.48 2 12.04c0 2.12.56 4.1 1.53 5.8L2 22l4.27-1.43c1.65.91 3.57 1.43 5.77 1.43 5.56 0 10.04-4.48 10.04-10.04C22.08 6.48 17.6 2 12.04 2zm5.7 14.32c-.23.66-1.33 1.27-1.92 1.35-.5.06-1.1.09-3.42-.86-3.1-1.3-5.09-5.25-5.25-5.46-.15-.21-1.3-1.8-1.3-3.44 0-1.64.87-2.44 1.17-2.77.3-.33.66-.41.88-.41.23 0 .45 0 .64.01.21.02.5-.08.78.57.28.64.94 2.22 1.02 2.38.08.16.12.34.03.54-.1.2-.15.32-.3.5-.15.18-.31.39-.44.53-.14.15-.28.32-.13.63.15.31.65 1.08 1.4 1.74.96.86 1.77 1.14 2.08 1.27.31.13.5.11.69-.07.19-.18.81-.94 1.01-1.26.2-.31.41-.26.68-.16.27.1 1.72.81 2.02.95.3.14.5.21.57.33.07.12.07.71-.16 1.37z" />
-                    </svg>
-                  </a>
-                  <a href="https://www.instagram.com/tousifqasim/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center hover:bg-pink-500/20 hover:border-pink-500/40 hover:scale-110 transition-all">
-                    <Instagram className="h-5 w-5 text-pink-500" />
-                  </a>
-                  <a href="https://www.facebook.com/imtousifqasim" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-emerald-600/10 border border-emerald-600/20 flex items-center justify-center hover:bg-emerald-600/20 hover:border-emerald-600/40 hover:scale-110 transition-all">
-                    <Facebook className="h-5 w-5 text-emerald-600" />
-                  </a>
-                  <a href="https://www.tiktok.com/@itxtousifahmad" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-foreground/10 border border-foreground/20 flex items-center justify-center hover:bg-foreground/20 hover:border-foreground/40 hover:scale-110 transition-all">
+                  <a href="https://www.tiktok.com/@fawadkyvlogs" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-foreground/10 border border-foreground/20 flex items-center justify-center hover:bg-foreground/20 hover:border-foreground/40 hover:scale-110 transition-all">
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
                     </svg>
                   </a>
+                  <span className="flex items-center text-sm text-muted-foreground font-medium">@fawadkyvlogs</span>
                 </div>
               </CardContent>
             </Card>
@@ -170,7 +160,7 @@ export function ContactSection() {
                     <Send className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Send a Message</h3>
+                    <h3 className="text-xl font-bold text-foreground">Book Your Promotion Now</h3>
                     <p className="text-sm text-muted-foreground">I&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
@@ -185,10 +175,10 @@ export function ContactSection() {
                       className="bg-white/5 dark:bg-black/10 border-white/10 h-14 pl-4 text-base rounded-xl focus:border-emerald-600/50 focus:ring-2 focus:ring-emerald-600/20 transition-all"
                     />
                     <Input
-                      type="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      type="tel"
+                      placeholder="Your WhatsApp Number"
+                      value={formData.whatsapp}
+                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                       required
                       className="bg-white/5 dark:bg-black/10 border-white/10 h-14 pl-4 text-base rounded-xl focus:border-emerald-600/50 focus:ring-2 focus:ring-emerald-600/20 transition-all"
                     />
@@ -202,25 +192,17 @@ export function ContactSection() {
                         <SelectValue placeholder="Select Budget Range" />
                       </SelectTrigger>
                       <SelectContent className="border-white/10 bg-background/95 backdrop-blur-xl">
-                        <SelectItem value="< $100" className="py-3 px-3 text-base">
+                        <SelectItem value="2,500 - 5,000 PKR" className="py-3 px-3 text-base">
                           <DollarSign className="h-4 w-4 shrink-0 text-emerald-600" />
-                          &lt; $100
+                          2,500 - 5,000 PKR
                         </SelectItem>
-                        <SelectItem value="$100 - $300" className="py-3 px-3 text-base">
+                        <SelectItem value="7,000 - 15,000 PKR" className="py-3 px-3 text-base">
                           <DollarSign className="h-4 w-4 shrink-0 text-emerald-600" />
-                          $100 - $300
+                          7,000 - 15,000 PKR
                         </SelectItem>
-                        <SelectItem value="$300 - $500" className="py-3 px-3 text-base">
+                        <SelectItem value="20,000 - 40,000+ PKR" className="py-3 px-3 text-base">
                           <DollarSign className="h-4 w-4 shrink-0 text-emerald-600" />
-                          $300 - $500
-                        </SelectItem>
-                        <SelectItem value="$500 - $1000" className="py-3 px-3 text-base">
-                          <DollarSign className="h-4 w-4 shrink-0 text-emerald-600" />
-                          $500 - $1,000
-                        </SelectItem>
-                        <SelectItem value="$1000+" className="py-3 px-3 text-base">
-                          <DollarSign className="h-4 w-4 shrink-0 text-emerald-600" />
-                          $1,000+
+                          20,000 - 40,000+ PKR
                         </SelectItem>
                         <SelectItem value="Not Sure" className="py-3 px-3 text-base">
                           <HelpCircle className="h-4 w-4 shrink-0 text-muted-foreground" />
@@ -238,29 +220,29 @@ export function ContactSection() {
                         <SelectValue placeholder="What are you looking for?" />
                       </SelectTrigger>
                       <SelectContent className="border-white/10 bg-background/95 backdrop-blur-xl">
-                        <SelectItem value="WordPress Development" className="py-3 px-3 text-base">
-                          <Code className="h-4 w-4 shrink-0 text-emerald-600" />
-                          WordPress Development
+                        <SelectItem value="Business Promotion" className="py-3 px-3 text-base">
+                          <TrendingUp className="h-4 w-4 shrink-0 text-emerald-600" />
+                          Business Promotion
                         </SelectItem>
-                        <SelectItem value="WHMCS Setup" className="py-3 px-3 text-base">
-                          <Package className="h-4 w-4 shrink-0 text-emerald-600" />
-                          WHMCS Setup
+                        <SelectItem value="Food Review" className="py-3 px-3 text-base">
+                          <Utensils className="h-4 w-4 shrink-0 text-emerald-600" />
+                          Food Review
                         </SelectItem>
-                        <SelectItem value="Shopify Development" className="py-3 px-3 text-base">
-                          <ShoppingCart className="h-4 w-4 shrink-0 text-emerald-600" />
-                          Shopify Development
+                        <SelectItem value="Mini Vlog" className="py-3 px-3 text-base">
+                          <Video className="h-4 w-4 shrink-0 text-emerald-600" />
+                          Mini Vlog
                         </SelectItem>
-                        <SelectItem value="Website Security" className="py-3 px-3 text-base">
-                          <Shield className="h-4 w-4 shrink-0 text-emerald-600" />
-                          Website Security / Recovery
+                        <SelectItem value="Shop Showcase" className="py-3 px-3 text-base">
+                          <Store className="h-4 w-4 shrink-0 text-emerald-600" />
+                          Shop Showcase
                         </SelectItem>
-                        <SelectItem value="Web Hosting" className="py-3 px-3 text-base">
-                          <Server className="h-4 w-4 shrink-0 text-emerald-600" />
-                          Web Hosting
+                        <SelectItem value="TikTok Reel" className="py-3 px-3 text-base">
+                          <Play className="h-4 w-4 shrink-0 text-emerald-600" />
+                          TikTok Reel
                         </SelectItem>
-                        <SelectItem value="Domain Reseller" className="py-3 px-3 text-base">
-                          <Globe className="h-4 w-4 shrink-0 text-emerald-600" />
-                          Domain Reseller Platform
+                        <SelectItem value="UK TikTok Account" className="py-3 px-3 text-base">
+                          <Music2 className="h-4 w-4 shrink-0 text-emerald-600" />
+                          UK TikTok Account
                         </SelectItem>
                         <SelectItem value="Other" className="py-3 px-3 text-base">
                           <HelpCircle className="h-4 w-4 shrink-0 text-muted-foreground" />
@@ -371,7 +353,7 @@ export function ContactSection() {
                       transition={{ delay: 0.3 }}
                       className="text-muted-foreground mb-6"
                     >
-                      Your message has been sent successfully! I&apos;ll get back to you as soon as possible.
+                      Your message has been sent! I&apos;ll get back to you within 24 hours.
                     </motion.p>
 
                     <motion.div
